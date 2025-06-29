@@ -1,0 +1,52 @@
+{
+  "dxt_version": "0.1",
+  "name": "file-manager-python",
+  "version": "0.1.0",
+  "description": "A Python MCP server for file operations",
+  "author": {
+    "name": "Anthropic"
+  },
+  "server": {
+    "type": "python",
+    "entry_point": "server/main.py",
+    "mcp_config": {
+      "command": "python",
+      "args": [
+        "${__dirname}/server/main.py"
+      ]
+    }
+  },
+  "compatibility": {
+    "claude_desktop": ">=0.10.0",
+    "platforms": [
+      "darwin",
+      "win32",
+      "linux"
+    ],
+    "runtimes": {
+      "python": ">=3.8.0 <4"
+    }
+  },
+  "tools": [
+    {
+      "name": "list_files",
+      "description": "List files in a directory"
+    },
+    {
+      "name": "read_file",
+      "description": "Read file contents"
+    },
+    {
+      "name": "get_file_info",
+      "description": "Get information about a file"
+    }
+  ],
+  "keywords": [
+    "file",
+    "directory",
+    "python",
+    "management",
+    "filesystem"
+  ],
+  "license": "MIT"
+}
